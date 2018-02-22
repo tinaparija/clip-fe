@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*div[class="row"] {
+    border: 1px dotted rgba(0, 0, 0, 0.5);
+}*/
+
+.container{
+	width:100%;
+	padding: 0px; 
+}
+
+.analytics{
+  border: black;
+
+}
+
+.topbar{
+	background-color: black;
+	color:white;
+}
+
+h3{
+	font-size: 2.5em;
+}
+.subtitle{
+	font-weight: bold;
+	font-size: 2em;
+	padding-top: 2% ;
+	padding-bottom: 2% ;
+}
+
+#signup_box{
+	background-color:  #003333;
+	margin-bottom: 5%;
+}
+
+.btn-link {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+.btn-link:hover {
+	color: #FFA07A;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.btn-primary{
+	background-color:  #003333;
+}
+
+.clipcontainer{
+	padding: 3% 20%;
+}
+
+.userprofile{
+	padding-top: 3%;
+}
+
+.clip{
+	margin-bottom: 10%;
+	font-size: 14px;
+}
+
+.postbuttons{
+	float: right;
+	color:black;
+	font-size: 10px;
+	font-weight: bold;
+}
