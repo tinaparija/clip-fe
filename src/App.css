@@ -3,14 +3,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
-
-/*div[class="row"] {
-    border: 1px dotted rgba(0, 0, 0, 0.5);
-}*/
-
 .container{
 	width:100%;
 	padding: 0px; 
+}
+
+.profile_page{
+	text-align: left;
 }
 
 .analytics{
@@ -53,7 +52,7 @@ h3{
 	background-color:  #003333;
 }
 
-.clipcontainer{
+.profile_container{
 	padding: 3% 20%;
 }
 
@@ -64,6 +63,10 @@ h3{
 .clip{
 	margin-bottom: 10%;
 	font-size: 14px;
+}
+
+.new_clip{
+	padding-top: 10%;
 }
 
 .postbuttons{

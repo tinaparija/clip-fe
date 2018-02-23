@@ -25,7 +25,7 @@ class UserInfo extends Component {
 
   render() {
     return (
-      <div className ="col-12">
+      <div className ="col col-12">
         <p> Welcome back, {this.state.user.name}</p>
       </div> 
     );
