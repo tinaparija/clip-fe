@@ -10,7 +10,7 @@ class Profile extends Component {
   constructor(){
     super();
     this.state = {
-      view: 'allClips'
+      profile_view: 'allClips'
     }
     this.newClip = this.newClip.bind(this)
     this.allClips = this.allClips.bind(this)
@@ -19,13 +19,13 @@ class Profile extends Component {
 
   allClips(){
     this.setState({
-      view: "allClips"
+      profile_view: "allClips"
     })
   }
 
   showAnalytics(){
     this.setState({
-      view: "analytics"
+      profile_view: "analytics"
     })
   }
 
@@ -56,7 +56,7 @@ class Profile extends Component {
                 </div>
                 <div className="col col-md-10 profile_content">
               <div className="row profile_container"> 
-                {this.state.view == "allClips" ? (<AllUserClips />) : (<AnalyticsFull />) }
+                {this.state.profile_view == "allClips" ? (<AllUserClips />) : (<AnalyticsFull />) }
               
               </div>
               </div> 

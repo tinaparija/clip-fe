@@ -50,12 +50,12 @@ updateMyState(stateKey) {
 	  			<form>
 	  				<div className="form-group">
 				    	<label htmlFor="email">Email</label>
-				   		<input type="email" className="form-control" id="email"  />
+				   		<input type="email" className="form-control" id="email" required />
 			 		</div>
 
 				 	<div className="form-group">
 					    <label htmlFor="password">Password</label>
-					    <input type="password" className="form-control" id="password" />
+					    <input type="password" className="form-control" id="password" required />
 				  	</div>
 				   	<button type='submit' className='btn btn-primary'>Submit</button>
 
@@ -68,17 +68,17 @@ updateMyState(stateKey) {
 	        <form onSubmit={this.createUser}>
 	          <div className="form-group">
 			    <label htmlFor="name">Name</label>
-			    <input type="name" className="form-control" id="name" onChange={this.updateMyState('name')}/>
+			    <input type="name" className="form-control" id="name" required onChange={this.updateMyState('name')}/>
 			  </div>
 
 	          <div className="form-group">
 			    <label htmlFor="email">Email</label>
-			    <input type="email" className="form-control" id="email" onChange={this.updateMyState('signup_email')}/>
+			    <input type="email" className="form-control" id="email"  required onChange={this.updateMyState('signup_email')}/>
 			  </div>
 
 			  <div className="form-group">
 			    <label htmlFor="password">Password</label>
-			    <input type="password" className="form-control" id="password" onChange={this.updateMyState('signup_pw')}/>
+			    <input type="password" className="form-control" id="password" required onChange={this.updateMyState('signup_pw')}/>
 			  </div>
 			  <button type='submit' className='btn btn-primary'>Submit</button>
 			</form >

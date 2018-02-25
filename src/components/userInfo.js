@@ -19,14 +19,13 @@ class UserInfo extends Component {
       this.setState({
       		user: json
       });
-
     });
   }
 
   render() {
     return (
       <div className ="col col-12">
-        <p> Welcome back, {this.state.user.name}</p>
+        <p> Good to see you, {this.state.user.name}</p>
       </div> 
     );
   }

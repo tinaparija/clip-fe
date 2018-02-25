@@ -14,12 +14,12 @@ class AllUserClips extends Component {
 
   getData(){
     let user_id = this.props.match.params.user_id; 
-    fetch(`http://localhost:8080/api/users/${user_id}`).then((res) => {
+    fetch(`http://localhost:8080/api/users/${user_id}/clips`).then((res) => {
       return res.json();
     }).then((json) => {
-      let user_clips = json.clips;
+      console.log(json);
       this.setState({
-          clips: user_clips
+          clips: json
       });
     });
   }

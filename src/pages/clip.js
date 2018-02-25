@@ -33,23 +33,17 @@ updateMyState(stateKey) {
 		})
 	}).then((res) => {
 		console.log(res)
-		debugger
 		return res.json()
 	}).then((json) => {
-		debugger
-		console.log(json);
+		this.props.history.push(`/${user_id}`);
 	});
   	
+
   }
 
   render() {
     return (
 	  <div className = "container">
-	  	  <div className ="row topbar" >
-            <div className="col col-md-1 col-sm-1">
-              <h3>Clip </h3>
-            </div>
-          </div>   
 	  	 <div className = "row">
 	      	<div className = "col col-md-8 offset-md-2 new_clip">
 		      	<form onSubmit={this.postClip}>
@@ -61,7 +55,7 @@ updateMyState(stateKey) {
 					<textarea className="form-control" rows="8" onChange={this.updateMyState('concept')} placeholder="Content"></textarea>
 					</div>
 
-					<button type='submit' className='btn btn-secondary'>Submit</button>
+					<button type='submit' className='btn btn-secondary'>Post</button>
 				</form>
 			</div>
 	      </div>
