@@ -21,7 +21,7 @@ updateMyState(stateKey) {
   	e.preventDefault();
 	let user_id = this.props.match.params.user_id; 
 	debugger
-	fetch(`http://localhost:8080/api/users/${user_id}/clips`, {  
+	fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/${user_id}/clips`, {  
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
@@ -52,7 +52,8 @@ updateMyState(stateKey) {
 					</div>
 					<div className="form-group">
 					
-					<textarea className="form-control" rows="8" onChange={this.updateMyState('concept')} placeholder="Content"></textarea>
+					<textarea className="form-control" maxlength="500" rows="8" onChange={this.updateMyState('concept')} placeholder="Content"></textarea>
+					<p>No more than 500 characters.</p> 
 					</div>
 
 					<button type='submit' className='btn btn-secondary'>Post</button>

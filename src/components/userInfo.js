@@ -9,13 +9,11 @@ class UserInfo extends Component {
     }
   }
 
-
   componentWillMount(){
     let user_id = this.props.match.params.user_id; 
-    fetch(`http://localhost:8080/api/users/${user_id}`).then((res) => {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/${user_id}`).then((res) => {
       return res.json();
     }).then((json) => {
-      console.log(json)
       this.setState({
       		user: json
       });

@@ -14,12 +14,12 @@ class AllUserClips extends Component {
 
   getData(){
     let user_id = this.props.match.params.user_id; 
-    fetch(`http://localhost:8080/api/users/${user_id}/clips`).then((res) => {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/${user_id}/clips`).then((res) => {
       return res.json();
     }).then((json) => {
-      console.log(json);
+      console.log(json.top_word);
       this.setState({
-          clips: json
+          clips: json.clips
       });
     });
   }
@@ -28,8 +28,7 @@ class AllUserClips extends Component {
     let user_id = this.props.match.params.user_id; 
     return (e) => {
       e.preventDefault();
-      console.log(clipId);
-      fetch(`http://localhost:8080/api/users/${user_id}/clips/${clipId}`, {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/${user_id}/clips/${clipId}`, {
           method: 'delete'
       }).then((json) => {
         this.getData();
@@ -42,7 +41,7 @@ class AllUserClips extends Component {
   }
 
   render() {
-	  return (
+	   return (
 	  	<div>
 		  	{this.state.clips.map(clip => {
 		  		return (
@@ -50,7 +49,7 @@ class AllUserClips extends Component {
   		  			<div className="clip">
   		  				<h4>{clip.concept}</h4>
   		  				<p>{clip.content}</p>
-                <button type="button" className="btn btn-link postbuttons" onClick={this.deleteClip(clip._id) }>Delete</button>
+                <button type="button" className="btn btn-link postbuttons" onClick={this.deleteClip(clip._id)}>Delete</button>
                 <button type="button" className="btn btn-link postbuttons">Edit</button>
   		  			</div>
             </div>

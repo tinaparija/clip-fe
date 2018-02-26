@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route, withRouter} from 'react-router-dom';
 import Auth from '../components/auth'
 
-class Home extends Component {
+class About extends Component {
   constructor(){
   	super();
   	this.state = {
@@ -24,6 +24,7 @@ class Home extends Component {
   	})
   }
 
+
   render() {
     return (
       <div className ="container">
@@ -32,26 +33,15 @@ class Home extends Component {
             <h3>Clip </h3>
           </div>
           <div className="col offset-md-9 col-md-4 profile_buttons">
-            <button type="button" className="btn btn-link">About</button>
+            <button type="button" className="btn btn-link">Home</button>
           </div>
+          
+
         </div>
-        <div className="row">
-          <div className="col col-md-6 offset-md-3 subtitle">
-            <p>Finish your thought.</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col col-md-4 col-sm-12 offset-md-4">
-          <section id="signup_box">
-             <button type="button" className="btn btn-link" onClick={(e) => this.auth_view(e, "signup")}>Sign Up</button>
-             <button type="button" className="btn btn-link" onClick={(e) => this.auth_view(e, "login")}>Login</button>
-          </section>
-          </div>
-          <Auth view = {this.state.auth_type} user_id={this.getUserId}/>
-         </div>
+        
       </div>
     );
   }
 }
 
-export default withRouter(Home);
+export default withRouter(About);

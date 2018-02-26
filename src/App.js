@@ -4,6 +4,7 @@ import { Switch, Route} from 'react-router-dom';
 import Home from './pages/home';
 import Profile from './pages/profile';
 import Clip from './pages/clip';
+import About from './pages/about' 
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
       <div className="App">
        <Switch>
 		    <Route exact path='/' render={(props) => (<Home user_id={this.props.setUserId} /> )} />
+        <Route exact path='/about' component={About}/> )} />
 		    <Route exact path='/:user_id' component={Profile}/>
 		    <Route exact path='/:user_id/clip/:type' component={Clip}/>
  		   </Switch>

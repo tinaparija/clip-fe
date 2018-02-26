@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {withRouter} from 'react-router-dom';
-import Analytics from '../components/analytics';
+import {Link, withRouter} from 'react-router-dom';
 import AnalyticsFull from '../components/analyticsFull';
 import AllUserClips from '../components/allUserClips';
 import UserInfo from '../components/userInfo'
@@ -41,7 +40,7 @@ class Profile extends Component {
           	<div className="col col-md-12">
   	        	<div className="row topbar"> 
                 <div className="col col-md-1">
-                 <h3>Clip </h3>
+                 <h3>Clip</h3>
                 </div>
   	       			<div className="col offset-md-7 col-md-4 profile_buttons">
                   <button type="button" className="btn btn-link" onClick={this.allClips}>All Clips</button>
@@ -52,12 +51,10 @@ class Profile extends Component {
   	       		<div className="row"> 
                 <div className="col col-md-2 userprofile">
   	      			  <UserInfo />
-                  <Analytics />
                 </div>
                 <div className="col col-md-10 profile_content">
               <div className="row profile_container"> 
                 {this.state.profile_view == "allClips" ? (<AllUserClips />) : (<AnalyticsFull />) }
-              
               </div>
               </div> 
   	      		</div>
