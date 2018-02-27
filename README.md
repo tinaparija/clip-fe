@@ -13,9 +13,16 @@ The backend is available here: https://clip-be.herokuapp.com/api/users
 
 ### Installation Steps 
 1. Fork & clone this repo. 
-2. npm install dependencies on both the backend & frontend 
+2. Npm install dependencies on both the backend & frontend 
     For the front end, npm install .dotenv and chartkick packages 
     For the backend, npm install mongoose, passport.js and .dotenv 
+
+### Wireframes & ERDs 
+![Alt text]("/images/wf1.jpg"?raw=true "picture")
+![Alt text]("/images/wf2.jpg"?raw=true "picture")
+![Alt text]("/images/wf3.jpg"?raw=true "picture")
+
+
 
 ### User Stories 
 This project was developed in line with the following user stories: 
@@ -26,7 +33,6 @@ This project was developed in line with the following user stories:
 5. Users can write new posts.
 6. Users can view analytics on their posts (most common word, posts per week)
 7. Users will be able to navigate through a stylistically clean / minimalist site.
-
 
 ### In the future..  
 
