@@ -2,10 +2,10 @@
 Clip was designed to help writers overcome mental blocks one paragraph at a time. By encouraging writers to post one complete and coherent paragraph per post, Clips focuses on making ideas concrete rather than let concepts swim around in writers' heads ad infinitum -- or let the weight of writing a full essay, column, blog post, etc. get in the way of testing the concept. Clip also provides the ability for users to get analytics on their posts per week and their most used words.
 
 
-### Technologies Used 
+###Technologies Used 
 
-###Front-End: Bootstrap, React.js, Fetch Protocol, Chartkick / Chartly for graphing analytics 
-###Back-End: Express & Mongoose on Node.js, MongoDB, Passport.js (authentication)
+Front-End: Bootstrap, React.js, Fetch Protocol, Chartkick / Chartly for graphing analytics 
+Back-End: Express & Mongoose on Node.js, MongoDB, Passport.js (authentication)
 
 
 The project is hosted on Heroku at: http://clip-fe.herokuapp.com/
