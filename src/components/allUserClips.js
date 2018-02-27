@@ -17,7 +17,6 @@ class AllUserClips extends Component {
     fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/${user_id}/clips`).then((res) => {
       return res.json();
     }).then((json) => {
-      console.log(json.top_word);
       this.setState({
           clips: json.clips
       });
@@ -41,6 +40,13 @@ class AllUserClips extends Component {
   }
 
   render() {
+     if (!this.state.clips[0]){
+        return(
+        <div>
+          <p>No posts yet! Start writing :)</p>
+        </div>
+       )
+     }
 	   return (
 	  	<div>
 		  	{this.state.clips.map(clip => {
