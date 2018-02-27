@@ -18,9 +18,9 @@ The backend is available here: https://clip-be.herokuapp.com/api/users
     For the backend, npm install mongoose, passport.js and .dotenv 
 
 ### Wireframes & ERDs 
-![Alt text]("/images/wf1.jpg"?raw=true "picture")
-![Alt text]("/images/wf2.jpg"?raw=true "picture")
-![Alt text]("/images/wf3.jpg"?raw=true "picture")
+![Wireframe](public/images/wf1.jpg)
+![Wireframe](public/images/wf2.jpg)
+![Wireframe](public/images/wf3.jpg)
 
 
 
