@@ -4,8 +4,9 @@ Clip was designed to help writers overcome mental blocks one paragraph at a time
 
 ### Technologies Used 
 
-Front-End: Bootstrap, React.js, Fetch Protocol, Chartkick / Chartly for graphing analytics 
-Back-End: Express & Mongoose on Node.js, MongoDB, Passport.js (authentication)
+#### Front-End: Bootstrap, React.js, Fetch Protocol, Chartkick / Chartly for graphing analytics 
+
+#### Back-End: Express & Mongoose on Node.js, MongoDB, Passport.js (authentication)
 
 
 The project is hosted on Heroku at: http://clip-fe.herokuapp.com/

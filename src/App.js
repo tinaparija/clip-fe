@@ -9,11 +9,11 @@ import About from './pages/about'
 
 class App extends Component {
   constructor(){
-  	super();
-  	this.state = {
+    super();
+    this.state = {
       user_id:'',
       post_type:'',
-  	}  
+    }
     this.setUserId = this.setUserId.bind(this);
   }
 
@@ -27,11 +27,11 @@ class App extends Component {
     return (
       <div className="App">
        <Switch>
-		    <Route exact path='/' render={(props) => (<Home user_id={this.props.setUserId} /> )} />
+        <Route exact path='/' render={(props) => (<Home user_id={this.props.setUserId} /> )} />
         <Route exact path='/about' component={About}/> )} />
-		    <Route exact path='/:user_id' component={Profile}/>
-		    <Route exact path='/:user_id/clip/:type' component={Clip}/>
- 		   </Switch>
+        <Route exact path='/:user_id' component={Profile}/>
+        <Route exact path='/:user_id/clip/:type' component={Clip}/>
+        </Switch>
       </div>
     );
   }

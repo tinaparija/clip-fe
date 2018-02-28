@@ -26,13 +26,12 @@ class Home extends Component {
 
   render() {
     return (
-      <div className ="container">
+      <div>
         <div className ="row topbar" >
           <div className="col col-md-1 col-sm-1">
-            <h3>Clip </h3>
+            <h3 className ="logo">Clip </h3>
           </div>
-          <div className="col offset-md-9 col-md-4 profile_buttons">
-            <button type="button" className="btn btn-link">About</button>
+          <div className="col offset-md-7 profile_buttons">
           </div>
         </div>
         <div className="row">

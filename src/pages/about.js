@@ -25,7 +25,7 @@ class About extends Component {
 
   render() {
     return (
-      <div className ="container">
+      <div className>
         <div className ="row topbar" >
           <div className="col col-md-1 col-sm-1">
             <h3>Clip </h3>

@@ -7,16 +7,16 @@ window.Highcharts = require('highcharts');
 
 class AnalyticsFull extends Component {
   constructor(){
-  	super();
-  	this.state = {
+    super();
+    this.state = {
       clips: [],
-      dates: {}, 
+      dates: {},
       top_word:''
     }
     this.getData = this.getData.bind(this);
     this.createChart = this.createChart.bind(this);
     this.setTopWord = this.setTopWord.bind(this);
-  	}
+    }
 
     setTopWord(word){
       this.setState({
@@ -25,13 +25,39 @@ class AnalyticsFull extends Component {
     }
 
     createChart(clips){
-      let count_holder = {}
+      let dates_array = []
       for (let i = 0; i < clips.length; i++){
-        console.log(clips[i].date);
-        count_holder[(clips[i].date)] = 1
+        let clip_date = new Date(clips[i].date); 
+        dates_array.push(clip_date);
       }
+
+      let oneWeekAgo = new Date();
+      oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+      let twoWeeksAgo = new Date();
+      twoWeeksAgo.setDate(oneWeekAgo.getDate() - 14)
+
+      let threeWeeksAgo = new Date();
+      threeWeeksAgo.setDate(oneWeekAgo.getDate() - 21)
+
+      let fourWeeksAgo = new Date();
+      fourWeeksAgo.setDate(oneWeekAgo.getDate() - 28)
+
+      let oneWeekClips = dates_array.filter (x => x > oneWeekAgo)
+      let twoWeekClips = dates_array.filter (x => x < oneWeekAgo && x > twoWeeksAgo)
+      let threeWeekClips = dates_array.filter (x => x < twoWeeksAgo && x > threeWeeksAgo);
+      let fourWeekClips = dates_array.filter (x => x < threeWeeksAgo && x > fourWeeksAgo);
+      // let count_holder = {}
+      // for (let i = 0; i < clips.length; i++){
+      //   console.log(clips[i].date);
+      //   count_holder[(clips[i].date)] = 1
+      // }
       this.setState({
-        dates: count_holder
+        dates: {four_weeks_ago: fourWeekClips.length, 
+                three_weeks_ago: threeWeekClips.length, 
+                two_weeks_ago: twoWeekClips.length, 
+                last_week: oneWeekClips.length
+               }
       })
     }
 
@@ -60,7 +86,7 @@ class AnalyticsFull extends Component {
         </section> 
         <section id = "graph"> 
           <p> Your posts per week: </p>
-          <LineChart data={this.state.dates} />
+          <LineChart discrete={true} messages={{empty: "No data"}} data={this.state.dates} />
         </section> 
       </div> 
     );

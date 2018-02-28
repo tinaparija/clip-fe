@@ -1,6 +1,6 @@
 .App {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
 }
 
 .container{
@@ -13,7 +13,7 @@
 }
 
 .analytics{
-  border: black;
+	border: black;
 }
 
 .topbar{
@@ -58,6 +58,7 @@ h3{
 
 .userprofile{
 	padding-top: 3%;
+	padding-left: 5%
 }
 
 .clip{
@@ -86,4 +87,28 @@ h3{
 
 .info_buttons{
 	color: black; 
+}
+
+.clip_input{
+	border: none;
+	font-size: 18px;
+}
+
+.clip_title{
+	font-weight:bold;
+}
+
+.clip_submit{
+	background-color: white;
+	color: black;
+	border-color:  #DCDCDC;
+}
+
+#clip_divider{
+	text-align: left;
+	margin-left: 15px;
+}
+
+.logo{
+	margin-left: 20px; 
 }

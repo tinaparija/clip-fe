@@ -35,12 +35,12 @@ class Profile extends Component {
 
   render() {
       return (
-        <div className="container profile_page">
+        <div className="profile_page">
         	<div className="row">
           	<div className="col col-md-12">
   	        	<div className="row topbar"> 
                 <div className="col col-md-1">
-                 <h3>Clip</h3>
+                 <h3 className ="logo">Clip</h3>
                 </div>
   	       			<div className="col offset-md-7 col-md-4 profile_buttons">
                   <button type="button" className="btn btn-link" onClick={this.allClips}>All Clips</button>
