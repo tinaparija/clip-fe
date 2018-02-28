@@ -52,6 +52,7 @@ class Clip extends Component {
                     <div className="form-group ">
                         <textarea className="form-control clip_input" required maxlength="500" rows="8" onChange={this.updateMyState('content')} placeholder="Content"></textarea>
                     </div>
+                    <p id="max-length-note"> Write it down in less than 500 characters.</p> 
                     <button type='submit' className='btn btn-secondary clip_submit'>Post</button>
                 </form>
             </div>

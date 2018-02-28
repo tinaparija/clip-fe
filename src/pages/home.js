@@ -4,24 +4,36 @@ import Auth from '../components/auth'
 
 class Home extends Component {
   constructor(){
-  	super();
-  	this.state = {
-  		auth_type:'',
-  	}
-  	this.auth_view = this.auth_view.bind(this);
+    super();
+    this.state = {
+      auth_type:'',
+    }
+    this.auth_view = this.auth_view.bind(this);
     this.getUserId = this.getUserId.bind(this);
+    this.getHomePage = this.getHomePage.bind(this);
+    this.getAboutPage = this.getAboutPage.bind(this);
   }
 
   getUserId(id) {
-    console.log(id);   
+    console.log(id);
     this.props.history.push(`/${id}`);
   }
 
   auth_view(e, val){
-  	e.preventDefault();
-  	this.setState({
-  		auth_type: val
-  	})
+    e.preventDefault();
+    this.setState({
+      auth_type: val
+    })
+  }
+
+   getHomePage(e){
+    e.preventDefault();
+    this.props.history.push(`/`);
+  }
+
+  getAboutPage(e){
+    e.preventDefault();
+    this.props.history.push(`/about`);
   }
 
   render() {
@@ -32,6 +44,8 @@ class Home extends Component {
             <h3 className ="logo">Clip </h3>
           </div>
           <div className="col offset-md-7 profile_buttons">
+            <button type="button" className="btn btn-link" onClick={this.getAboutPage}>About</button>
+            <button type="button" className="btn btn-link" onClick={this.getHomePage}>Home</button>
           </div>
         </div>
         <div className="row">

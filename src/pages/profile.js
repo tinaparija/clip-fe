@@ -36,33 +36,33 @@ class Profile extends Component {
   render() {
       return (
         <div className="profile_page">
-        	<div className="row">
-          	<div className="col col-md-12">
-  	        	<div className="row topbar"> 
+          <div className="row">
+            <div className="col col-md-12">
+             <div className="row topbar"> 
                 <div className="col col-md-1">
                  <h3 className ="logo">Clip</h3>
                 </div>
-  	       			<div className="col offset-md-7 col-md-4 profile_buttons">
+                  <div className="col offset-md-7 col-md-4 profile_buttons">
                   <button type="button" className="btn btn-link" onClick={this.allClips}>All Clips</button>
                   <button type="button" className="btn btn-link" onClick={this.showAnalytics}>Analytics</button>
                   <button type="button" className="btn btn-link" onClick={this.newClip}>New Clip</button>
                 </div>
-  	       		</div>
-  	       		<div className="row"> 
+              </div>
+              <div className="row"> 
                 <div className="col col-md-2 userprofile">
-  	      			  <UserInfo />
+                  <UserInfo />
                 </div>
                 <div className="col col-md-10 profile_content">
               <div className="row profile_container"> 
+                <div className="col col-md-12">
                 {this.state.profile_view == "allClips" ? (<AllUserClips />) : (<AnalyticsFull />) }
+                </div>
               </div>
               </div> 
-  	      		</div>
-  	      
-        		</div>
-        
-        	</div>      	
-        </div> 
+             </div>
+            </div>
+          </div>
+        </div>
       );
   }
 }

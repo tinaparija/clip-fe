@@ -47,23 +47,23 @@ class AllUserClips extends Component {
         </div>
        )
      }
-	   return (
-	  	<div>
-		  	{this.state.clips.map(clip => {
-		  		return (
+     return (
+      <div>
+        {this.state.clips.map(clip => {
+        return (
             <div>
-  		  			<div className="clip">
-  		  				<h4>{clip.concept}</h4>
-  		  				<p>{clip.content}</p>
+              <div className="clip">
+                <h4>{clip.concept}</h4>
+                <p>{clip.content}</p>
                 <button type="button" className="btn btn-link postbuttons" onClick={this.deleteClip(clip._id)}>Delete</button>
                 <button type="button" className="btn btn-link postbuttons">Edit</button>
-  		  			</div>
+              </div>
             </div>
-		  		)
-		  	})}
-	  	</div>
-	  );
-	}
+          )
+        })}
+      </div>
+    );
+  }
 }
 
 export default withRouter(AllUserClips);

@@ -9,13 +9,20 @@ class AnalyticsFull extends Component {
   constructor(){
     super();
     this.state = {
-      clips: [],
       dates: {},
-      top_word:''
+      top_word:'',
+      clips: []
     }
     this.getData = this.getData.bind(this);
     this.createChart = this.createChart.bind(this);
     this.setTopWord = this.setTopWord.bind(this);
+    this.setClips = this.setClips.bind(this);
+    }
+
+    setClips(clips){
+      this.setState({
+        clips: clips 
+      })
     }
 
     setTopWord(word){
@@ -47,16 +54,11 @@ class AnalyticsFull extends Component {
       let twoWeekClips = dates_array.filter (x => x < oneWeekAgo && x > twoWeeksAgo)
       let threeWeekClips = dates_array.filter (x => x < twoWeeksAgo && x > threeWeeksAgo);
       let fourWeekClips = dates_array.filter (x => x < threeWeeksAgo && x > fourWeeksAgo);
-      // let count_holder = {}
-      // for (let i = 0; i < clips.length; i++){
-      //   console.log(clips[i].date);
-      //   count_holder[(clips[i].date)] = 1
-      // }
       this.setState({
-        dates: {four_weeks_ago: fourWeekClips.length, 
-                three_weeks_ago: threeWeekClips.length, 
-                two_weeks_ago: twoWeekClips.length, 
-                last_week: oneWeekClips.length
+        dates: {"four weeks ago": fourWeekClips.length, 
+                "three weeks ago": threeWeekClips.length, 
+                "two weeks ago": twoWeekClips.length, 
+                "last week": oneWeekClips.length
                }
       })
     }
@@ -67,8 +69,8 @@ class AnalyticsFull extends Component {
         return res.json();
       }).then((json) => {
           this.createChart(json.clips);
-          this.setTopWord(json.top_word)
-
+          this.setTopWord(json.top_word);
+          this.setClips(json.clips);
       })
     };
 
@@ -77,6 +79,13 @@ class AnalyticsFull extends Component {
   }
 
   render() {
+      if (!this.state.clips[0]){
+        return(
+        <div>
+          <p>Analytics unavailable because there are no posts.</p>
+        </div>
+       )
+      }
     return (
       <div className ="col-12 ">
         <h4> Clip Analytics </h4>
