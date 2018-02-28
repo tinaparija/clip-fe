@@ -1,10 +1,8 @@
 ### Clip Overview 
 Clip was designed to help writers overcome mental blocks one paragraph at a time. By encouraging writers to post one complete and coherent paragraph per post, Clip focuses on making ideas concrete rather than let concepts swim around in writers' heads ad infinitum, or let the weight of writing a full essay, column, blog post, etc. get in the way of testing the concept. Clip also provides user analytics on their posts, including posts per week and most used words.
 
-![clip page](/image/clip.jpg)
-![clip analytics](analytics.jpg)
-
-
+![clip page](/images/clip.jpg)
+![clip analytics](/images/analytics.jpg)
 
 
 ### Technologies Used 
