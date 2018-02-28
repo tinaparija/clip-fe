@@ -17,8 +17,8 @@ The backend is available here: https://clip-be.herokuapp.com/api/users
 ### Installation Steps 
 1. Fork & clone this repo. 
 2. Npm install dependencies on both the backend & frontend 
-    For the front end, npm install .dotenv and chartkick packages 
-    For the backend, npm install mongoose, passport.js and .dotenv 
+#### For the front end, npm install .dotenv and chartkick packages 
+#### For the backend, npm install mongoose, passport.js and .dotenv 
 
 ### User Stories 
 This project was developed in line with the following user stories: 
