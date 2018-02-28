@@ -11,8 +11,8 @@ Clip was designed to help writers overcome mental blocks one paragraph at a time
 #### Back-End: Express & Mongoose on Node.js, MongoDB, Passport.js (authentication)
 
 
-The project is hosted on Heroku at: http://clip-fe.herokuapp.com/
-The backend is available here: https://clip-be.herokuapp.com/api/users
+#### The project is hosted on Heroku at: http://clip-fe.herokuapp.com/
+#### The backend is available here: https://clip-be.herokuapp.com/api/users and the repo is available here: https://github.com/tinaparija/clip
 
 ### Installation Steps 
 1. Fork & clone this repo. 
