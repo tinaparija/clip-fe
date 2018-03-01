@@ -50,7 +50,7 @@ class About extends Component {
         <div className="row about_content">
           <div className ="col col-md-6 offset-md-3 about-content"> 
             <p>Clip was designed to help writers overcome mental blocks one paragraph at a time. By encouraging writers to post one complete and coherent paragraph per post, Clip focuses on making ideas concrete rather than let concepts swim around in writers' heads ad infinitum, or let the weight of writing a full essay, column, blog post, etc. get in the way of testing the concept. </p>
-            <p>Clip also provides user analytics on their posts, including posts per week and most used words. </p>
+            <p>Clip also provides user analytics on posts, including posts per week and most used words. </p>
           </div> 
         </div> 
 
