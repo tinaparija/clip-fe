@@ -9,6 +9,7 @@ class AllUserClips extends Component {
       refresh: ''
     }
     this.deleteClip = this.deleteClip.bind(this);
+    this.showEditView = this.showEditView.bind(this);
     this.getData = this.getData.bind(this);
   }
 
@@ -28,10 +29,18 @@ class AllUserClips extends Component {
     return (e) => {
       e.preventDefault();
       fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/${user_id}/clips/${clipId}`, {
-          method: 'delete'
+          method: 'delete', body: {credentials: "include"}
       }).then((json) => {
         this.getData();
         });
+    }
+  }
+
+  showEditView(clipId){
+    let user_id = this.props.match.params.user_id; 
+    return (e) => {
+      e.preventDefault();
+      this.props.history.push(`/${user_id}/clip/${clipId}`);
     }
   }
 
@@ -56,7 +65,7 @@ class AllUserClips extends Component {
                 <h4>{clip.concept}</h4>
                 <p>{clip.content}</p>
                 <button type="button" className="btn btn-link postbuttons" onClick={this.deleteClip(clip._id)}>Delete</button>
-                <button type="button" className="btn btn-link postbuttons">Edit</button>
+                <button type="button" className="btn btn-link postbuttons" onClick={this.showEditView(clip._id)}>Edit</button>
               </div>
             </div>
           )

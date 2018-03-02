@@ -37,11 +37,14 @@ loginUser(e){
         password: this.state.login_pw
       }), credentials: "include"
     }).then((res) => {
-        console.log(res.body);
         return res.json()
-    }).then((json) => {
-        console.log(json)
-        this.props.user_id(json._id)
+    }).then((res) => {
+        if (res._id){
+          this.props.user_id(res._id);
+        }
+        else{
+            console.log("try again");
+        }
     });
 }
 
@@ -60,14 +63,19 @@ createUser(e){
         password: this.state.signup_pw
       }), credentials: "include"
     }).then((res) => {
-    console.log(res);
+        console.log(res);
         return res.json()
-    }).then((json) => {
-        this.props.user_id(json._id)
+    }).then((res) => {
+        if (res._id){
+          this.props.user_id(res._id);
+        }
+        else{
+            console.log("try again");
+        }
     });
 }
 
-  render() {
+render() {
     return(
         <div className="col col-md-4 col-sm-12 offset-md-4">
             <form style = {this.props.view == 'login' ? {} : {display: 'none'}}onSubmit={this.loginUser}>
@@ -102,6 +110,6 @@ createUser(e){
         </div>
         );
     }
-  }
+}
 
 export default Auth;
