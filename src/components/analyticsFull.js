@@ -37,23 +37,29 @@ class AnalyticsFull extends Component {
         let clip_date = new Date(clips[i].date); 
         dates_array.push(clip_date);
       }
-
+      let currentDate = new Date();
+      console.log(currentDate);
+      
       let oneWeekAgo = new Date();
-      oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+      oneWeekAgo.setDate(currentDate.getDate() - 7);
 
       let twoWeeksAgo = new Date();
-      twoWeeksAgo.setDate(oneWeekAgo.getDate() - 14)
+      twoWeeksAgo.setDate(currentDate.getDate() - 14)
+      console.log(twoWeeksAgo)
 
       let threeWeeksAgo = new Date();
-      threeWeeksAgo.setDate(oneWeekAgo.getDate() - 21)
+      threeWeeksAgo.setDate(currentDate.getDate() - 21)
+      console.log(threeWeeksAgo)
 
       let fourWeeksAgo = new Date();
-      fourWeeksAgo.setDate(oneWeekAgo.getDate() - 28)
+      fourWeeksAgo.setDate(currentDate.getDate() - 28)
+      console.log(fourWeeksAgo)
 
       let oneWeekClips = dates_array.filter (x => x > oneWeekAgo)
       let twoWeekClips = dates_array.filter (x => x < oneWeekAgo && x > twoWeeksAgo)
       let threeWeekClips = dates_array.filter (x => x < twoWeeksAgo && x > threeWeeksAgo);
-      let fourWeekClips = dates_array.filter (x => x < threeWeeksAgo && x > fourWeeksAgo);
+      let fourWeekClips = dates_array.filter (x => x < threeWeeksAgo && fourWeeksAgo);
+
       this.setState({
         dates: {"four weeks ago": fourWeekClips.length, 
                 "three weeks ago": threeWeekClips.length, 

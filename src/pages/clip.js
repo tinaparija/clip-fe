@@ -105,7 +105,6 @@ class Clip extends Component {
         </div>
     );
     }
-    console.log("render edit")
     return (
       <div className = "container">
         <div className = "row">
