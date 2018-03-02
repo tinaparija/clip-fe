@@ -10,6 +10,7 @@ class Auth extends Component {
         signup_email: '',
         signup_pw:'',
         name: '',
+        signup_worked:''
     }
     this.updateMyState = this.updateMyState.bind(this);
     this.createUser = this.createUser.bind(this);
@@ -43,11 +44,12 @@ loginUser(e){
           this.props.user_id(res._id);
         }
         else{
-            console.log("try again");
+            this.setState({
+                signup_worked: 'nope'
+            })
         }
     });
 }
-
 
 createUser(e){
     e.preventDefault();
@@ -70,7 +72,9 @@ createUser(e){
           this.props.user_id(res._id);
         }
         else{
-            console.log("try again");
+            this.setState({
+                signup_worked: 'nope'
+            })
         }
     });
 }
@@ -106,7 +110,11 @@ render() {
                     <input type="password" className="form-control" required onChange={this.updateMyState('signup_pw')}/>
                 </div>
                     <button type='submit' className='btn btn-primary'>Submit</button>
-                </form >    
+                </form >
+                <div style = {this.state.signup_worked =="nope" ? {} : {display:'none'}}>
+                    <p></p>
+                    <p> Sometimes Heroku is weird. Please refresh and try again in 2 minutes.</p>
+                </div> 
         </div>
         );
     }

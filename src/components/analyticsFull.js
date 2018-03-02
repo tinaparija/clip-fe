@@ -38,22 +38,18 @@ class AnalyticsFull extends Component {
         dates_array.push(clip_date);
       }
       let currentDate = new Date();
-      console.log(currentDate);
       
       let oneWeekAgo = new Date();
       oneWeekAgo.setDate(currentDate.getDate() - 7);
 
       let twoWeeksAgo = new Date();
       twoWeeksAgo.setDate(currentDate.getDate() - 14)
-      console.log(twoWeeksAgo)
 
       let threeWeeksAgo = new Date();
       threeWeeksAgo.setDate(currentDate.getDate() - 21)
-      console.log(threeWeeksAgo)
 
       let fourWeeksAgo = new Date();
       fourWeeksAgo.setDate(currentDate.getDate() - 28)
-      console.log(fourWeeksAgo)
 
       let oneWeekClips = dates_array.filter (x => x > oneWeekAgo)
       let twoWeekClips = dates_array.filter (x => x < oneWeekAgo && x > twoWeeksAgo)
