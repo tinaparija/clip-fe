@@ -49,10 +49,10 @@ class Profile extends Component {
                 </div>
               </div>
               <div className="row"> 
-                <div className="col col-md-2 userprofile">
+                <div className="col col-md-2 col-sm-2 userprofile">
                   <UserInfo />
                 </div>
-                <div className="col col-md-10 profile_content">
+                <div className="col col-md-10 col-sm-10 profile_content">
               <div className="row profile_container"> 
                 <div className="col col-md-12">
                 {this.state.profile_view == "allClips" ? (<AllUserClips />) : (<AnalyticsFull />) }

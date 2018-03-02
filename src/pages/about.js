@@ -36,7 +36,7 @@ class About extends Component {
           <div className="col col-md-1 col-sm-1">
             <h3 className ="logo">Clip </h3>
           </div>
-          <div className="col offset-md-7 profile_buttons">
+          <div className="col offset-md-8 offset-sm-8 profile_buttons">
             <button type="button" className="btn btn-link" onClick={this.getAboutPage}>About</button>
             <button type="button" className="btn btn-link" onClick={this.getHomePage}>Home</button>
           </div>

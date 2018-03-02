@@ -42,7 +42,7 @@ class Home extends Component {
           <div className="col col-md-1 col-sm-1">
             <h3 className ="logo">Clip </h3>
           </div>
-          <div className="col offset-md-7 offset-sm-3 profile_buttons">
+          <div className="col offset-md-8 offset-sm-8 profile_buttons">
             <button type="button" className="btn btn-link" onClick={this.getAboutPage}>About</button>
             <button type="button" className="btn btn-link" onClick={this.getHomePage}>Home</button>
           </div>
@@ -53,15 +53,19 @@ class Home extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col col-md-4 col-sm-12 offset-md-4">
+          <div className="col col-md-4 offset-md-4 col-sm-12">
           <section id="signup_box">
             <button type="button" className="btn btn-link" onClick={(e) => this.auth_view(e, "signup")}>Sign Up</button>
              <button type="button" className="btn btn-link" onClick={(e) => this.auth_view(e, "login")}>Login</button>
              <p></p>
           </section>
           </div>
-          <Auth view = {this.state.auth_type} user_id={this.getUserId}/>
-         </div>
+        </div> 
+        <div className="row">
+          <div className="col">
+            <Auth view = {this.state.auth_type} user_id={this.getUserId}/>
+          </div>
+        </div>
       </div>
     );
   }
